@@ -23,33 +23,33 @@ import java.util.Scanner;
  * @author Adrian Bueno Olmedo <adrian.bueno.alum@iescamp.es>
  */
 public class Main {
-        public static final Scanner SCN = 
-	  new Scanner(System.in, "Windows-1252")
-	  .useLocale(Locale.ENGLISH).useDelimiter("\\s+");
-        
-    public static void main(String[] args){
-          double Area;
-          
+
+    public static final Scanner SCN
+            = new Scanner(System.in, "Windows-1252")
+                    .useLocale(Locale.ENGLISH).useDelimiter("\\s+");
+
+    public static void main(String[] args) {
+        double Area;
+
         try {
-             System.out.printf("Inserte la base de Triangulo...:");
-         double Base = SCN.nextDouble();
-             System.out.printf("Inserte la altura de Triangulo...:");
-             //El área de un triángulo rectángulo es igual al producto de los catetos partido por 2 (base * altura / 2)
-         double Altura = SCN.nextDouble();
-         Area = Base*Altura/2;
-         
-         //Mensaje final
-             System.out.printf("Base triangulo...: %.1f%n", Base);
-             System.out.printf("Altura triangulo.: %.1f%n", Altura);
-             System.out.printf("Area triangulo...: %.1f%n", Area);
-         
-         
-        }catch (Exception e){
-             System.out.printf("ERROR: Entrada incorrecta."); 
-             
-        }finally {
-          SCN.nextLine();
-         }
-        
+            System.out.printf("Inserte la base de Triangulo.....:");
+            double Base = SCN.nextDouble();
+            System.out.printf("Inserte la altura de Triangulo...:");
+            //El área de un triángulo rectángulo es igual al producto de los catetos partido por 2 (base * altura / 2)
+            double Altura = SCN.nextDouble();
+            Area = Base * Altura / 2;           
+                                                                
+            //Mensaje final                                      
+            System.out.printf("Base triangulo...................: %.1f%n", Base);
+            System.out.printf("Altura triangulo.................: %.1f%n", Altura);
+            System.out.printf("Area triangulo...................: %.1f%n", Area);
+
+        } catch (Exception e) {
+            System.out.printf("ERROR: Entrada incorrecta.");
+
+        } finally {
+            SCN.nextLine();
+        }
+
     }
 }
